@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Roboto+Slab&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    outline: none;
+    text-decoration: none;
+
+}
+:root{
+    --bg-color:#1f242d;
+    --scond-big-color:#323946;
+    --tex-color:#fff;
+    --min-color:#0ef;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--tex-color);
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+/* header start here  */
+.header{
+     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; 
+    display: flex;
+    padding: 2rem 10%;
+
+}
+.header.sticky{
+    box-shadow: .1rem solid rgba(0, 0 , 0, .2);
+}
+.logo{
+    font-size: 2.5rem;
+    color: var(--tex-color);
+    font-weight: 600;
+    cursor: default;
+}
+.navbar a{
+ font-size: 1.7rem;
+ color: var(--tex-color);
+ margin-left: 4rem;
+ transition: .3s;
+}
+.navbar a:hover,
+.navbar a.active{
+    color: var(--min-color);
+}
+#menu-icno{
+    font-size: 3rem;
+    color: var(--tex-color);
+    display: none;
+}
+
+/* header end here  */
+
+/*home section strt here  */
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--scond-big-color);
+}
+.home-contact h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+.home-contact h1{
+    font-size: 4rem;
+    line-height: 1.3;
+    font-weight: 700;
+}
+.home-img  img{
+    width: 35vw;
+}
+.home-contact p{
+    font-size: 1.6rem;
+}
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--min-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--min-color);
+    margin: 3rem 1.4rem 3rem 0;
+    transition: 0.2s;
+
+}
+.home-contact h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+span{
+    color: var(--min-color);
+}
+.social-media a:hover{
+    background-color: var(--min-color);
+    color: var(--scond-big-color);
+    box-shadow: 0 0 ;
+}
+.btn{
+    display: inline;
+    padding: 1rem 2.8rem;
+    background: var(--min-color);
+    border-radius: 4rem;
+    box-shadow: 0 0.1 1rem var(--min-color);
+    letter-spacing: .2rem;
+    font-weight: 600;
+    color: var(--scond-big-color);
+}
+.btn:hover{
+    color: #0ef;
+}
+/* section end here  */
+
+/* about section start here  */
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+
+}
+.about_img{
+    width: 35vw;
+}
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+.abot-contact{
+    text-align: left;
+    line-height: 1.3;
+}
+.abot-contact h3{
+    font-size: 2.4rem;
+}
+.abot-contact p{
+ font-size: 1.5rem;
+ margin: 2rem 0 3rem;
+}
+/* about section end here  */
+
+/* service section start here */
+.service h2{
+    margin-bottom: 5rem;
+}
+.service-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+.service-container .service-box{
+   flex: 1 1 30rem;
+   background-color: var(--scond-big-color);
+   border-radius: 2rem;
+   padding: 3rem 2rem 4rem;
+   text-align: center;
+   border: solid .2rem var(--min-color);
+}
+.service-box i{
+    font-size: 7rem;
+    color: var(--min-color);
+}
+.service-box h3{
+    font-size: 2.5rem;
+} 
+.service-box p{
+    font-size: 1.6rem;
+    margin: 1rem  0 3rem ;
+}
+/* service section end here */
+
+ /* Protfolio section  start here-- */
+.protfolio{
+    background-color: var(--scond-big-color);
+
+}
+.protfolio h2{
+    margin-bottom: 4rem;
+}
+.protfolio-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.protfolio-container .protfolio-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    display: flex;
+    overflow: hidden;
+}
+.protfolio-box img{
+    width: 100%;
+}
+.protfolio-box:hover img{
+    transform: scale(1.1);
+}
+.protfolio-box .protfolio-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0 , 0, .1), var(--min-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(100%);
+    transform: .5s ease;
+}
+.protfolio-box:hover .protfolio-layer{
+    transform: translateX(0);
+}
+.protfolio-layer h4{
+    font-size: 4rem;
+    color: var(--min-color);
+}
+.protfolio-layer p{
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem ;
+    align-items: center;
+}
+.protfolio-layer a i{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    background-color: var(--tex-color);
+    border-radius: 50%;
+}
+.protfolio-layer a i{
+    font-size: 2rem ;
+    color: var(--scond-big-color);
+}
+/* Protfolio section  end here-- */
+
+/* Contact start here */
+.contact{
+    margin-bottom: 3rem;
+}
+.contact form{
+    max-width: 70rem;
+    margin: 1em auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+} 
+.contact form .input-box input,
+.contact, form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--tex-color);
+    background-color: var(--scond-big-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+.contact form .input-box input{
+    width: 49%;
+}
+.contact  form textarea{
+    resize: none;
+}
+/* Contact end here */
+
+/* footer section strt here */
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 7%;
+    background-color: var(--scond-big-color);
+    flex-wrap: wrap;
+}
+.footer-text{
+    font-size: 1.6rem;
+}
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    border-radius: .8rem;
+    background-color: var(--tex-color);
+    transition: .5s ease;
+}
+.footer-iconTop a i{
+    color: var(--min-color);
+    font-size: 2.3rem;
+}
+.footer-iconTop a:hover{
+    box-shadow: 0 0 1rem var(--min-color);
+}
+/* footer section end here  */
+
+/* responsive desgain */
+@media (max-width: 1200px)  { 
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px)  { 
+    .header{
+        padding: 10rem 3% 2rem ;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .service{
+        padding: 2rem;
+    }
+    .protfolio{
+        padding: 7rem;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+@media (max-width: 768px){
+    #menu-icno{
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background-color: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0 , 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0 , 0, .2);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .home{
+        flex-direction: column;
+    }
+    .home-contact h3{
+        font-size: 2.6rem;
+    }
+    .home-contact h1{
+        font-size: 5rem;
+    }
+   .home-img img{
+    width: 70vh;
+    margin-top: 4rem;
+   }
+
+   .about{
+    flex-direction: column-reverse;
+   }
+   .about_img img{
+    width: 70vh;
+    margin-top: 4rem;
+   }
+   .service h2{
+    margin-bottom: 3rem;
+   }
+   .protfolio h2{
+    margin-bottom: 3rem;
+   }
+   .protfolio-container{
+    grid-template-columns: repeat(2, 1fr);
+   }
+   .contact form .input-box input{
+    width: 100%;
+}
+}
+@media (max-width: 617px) {
+    
+    .protfolio-container{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 450px) {
+    
+    htm{
+        font-size: 50%;
+    }
+    .contact form .input-box input{
+        width: 100%;
+    }
+}
+
+@media (max-width: 365px) {
+    .home-img img{
+        width: 90vh;
+    }
+    .about_img img{
+        width: 90vh;
+    }
+    .footer{
+        flex-direction: column-reverse;
+    }
+     .footer{
+        text-align: center;
+     }
+}
